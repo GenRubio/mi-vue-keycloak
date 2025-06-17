@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Silent SSO Callback</title>
+</head>
+
+<body>
+    <script>
+        // Cuando Keycloak cargue aquí, le pasará los parámetros (search + hash)
+        // y los reenvía al padre (tu app) para que el adapter los procese.
+        parent.postMessage(location.search + location.hash, window.location.origin);
+    </script>
+</body>
+
+</html>
